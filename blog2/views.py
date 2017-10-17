@@ -3,12 +3,9 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
-import models
 # Create your views here.
 
 
 def index(request):
     # return HttpResponse('Hello,world')
-    article = models.Article.objects.get(pk=1)
-    #return render(request, "blog/index.html", {"hello": "hello blog"})
-    return render(request, "blog/index.html", {"article": article})
+    return render(request, "blog2/index.html", {"hello": "hello blog"})
