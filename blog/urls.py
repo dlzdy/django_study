@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from . import views
+
+#blog/xxxxx
 urlpatterns = [
+    url(r'^test/', views.test), # blog/test/
     url(r'^$', views.index), # blog/
     url(r'^index/$', views.index), #blog/index blog/index/
+    url(r'^article/(?P<article_id>[0-9]+)$', views.article_page, name="article_page"),  # blog/article/2
+
 ]
