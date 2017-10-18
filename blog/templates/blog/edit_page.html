@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="{% url 'blog:edit_action' %}" method="post">
+        {% csrf_token %}
         <label>文章标题</label>
         <input type="text" name="title">
         <br/>
@@ -14,7 +15,7 @@
         <input type="text" name="content">
         <br/>
 
-        <input type="submit" name="">
+        <input type="submit" value="提交">
     </form>
 </body>
 </html>
